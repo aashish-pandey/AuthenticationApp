@@ -4,7 +4,7 @@ var signup = require('./signup')
 var authenticate = require('./authenticate')
 app = express()
 
-const PORT = process.env.PORT || 3030;
+const PORT = process.env.PORT || 3000;
 
 app.listen(PORT, function(){
     console.log("Authentication system is running")
