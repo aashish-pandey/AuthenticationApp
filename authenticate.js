@@ -1,7 +1,7 @@
-var ip = require('ip');
+var ip = require('request-ip');
 
 module.exports = function(req, res){
 
-    // console.log(req.ip)
-    res.send("Your IP address is " + req.ip)
+    console.log(ip.getClientIp(req))
+    res.send("Your IP address is " + ip.getClientIp(req))
 }

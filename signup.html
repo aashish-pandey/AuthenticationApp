@@ -12,17 +12,24 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="">
     </head>
+    <script>
+        function abc(){
+            fetch('https://api.ipify.org/?format=json').then(results=>results.json()).then(data => {document.getElementById('ip').value += ' ' + data.ip})
+            
+        }
+        abc()
+    </script>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-
         <form action="welcome">
             Enter your name: 
             <input type="text" name="uname"><br>
             Enter your email:
             <input type="email" name = "uemail"><br>
-
+            your ip address:
+            <input type="text" name="ip" id="ip"><br>
             Enter your password:
             <input type="password" name = "upassword"><br>
 
@@ -30,5 +37,7 @@
         </form>
         
         <script src="" async defer></script>
+
     </body>
-</html>
+
+    </html>
